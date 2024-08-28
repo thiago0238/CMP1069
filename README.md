@@ -20,7 +20,7 @@ Este projeto é a culminação de café, desespero e algumas boas doses de "isso
 1. **Clone o Repositório** (se tiver coragem):  
    ```bash
    git clone https://github.com/thiago0238/CMP1069
-   ``
+   
 ## 📚 Como Este Projeto Funciona?
 
 Funcionamento? 🤔 Isso depende de uma série de fatores:
