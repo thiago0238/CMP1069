@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG-Cinema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SG-Cinema</h1>
+        <hr>
+        <ul id="header-list"></ul>
+        <hr>
+        <h2>Filme</h2>
+        
+        <div class="label-input">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" placeholder="Nome do Filme (alt+t)">
+        </div>
+        
+        <div class="label-input">
+            <label for="classificacao">Classificação</label>
+            <select name="classificacao" id="classificacao"></select>
+        </div>
+        
+        <div class="label-input">
+            <label for="genero">Gênero</label>
+            <select name="genero" id="genero"></select>
+        </div>
+        
+        <div class="label-input">
+            <label for="resumo">Resumo</label>
+            <textarea name="resumo" id="resumo" placeholder="Descrição do Filme"></textarea>
+        </div>
+    </div>
+
+    <script src="scripter.js" type="module"></script>
+</body>
+</html>
