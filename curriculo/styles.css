@@ -1,0 +1,59 @@
+body {
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #004085;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background-color: #e2f0ff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.section-title {
+    border-bottom: 2px solid #004085;
+    padding-bottom: 5px;
+}
+
+.portfolio-links a {
+    font-size: 0.9rem;
+}
+
+.btn-create-cv {
+    background-color: #004085;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.btn-create-cv:hover {
+    background-color: #0056b3;
+}
