@@ -1,40 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SG-Cinema</title>
+    <!-- Adicionando Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>SG-Cinema</h1>
-        <hr>
-        <ul id="header-list"></ul>
-        <hr>
-        <h2>Filme</h2>
-        
-        <div class="label-input">
-            <label for="titulo">Título</label>
-            <input type="text" id="titulo" placeholder="Nome do Filme (alt+t)">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">SG-Cinema</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sessões</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ingressos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <form id="searchForm" class="d-flex ms-3">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Procurar filme..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
-        
-        <div class="label-input">
-            <label for="classificacao">Classificação</label>
-            <select name="classificacao" id="classificacao"></select>
+    </header>
+
+    <div class="container mt-5">
+        <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carousel-inner">
+                <!-- Imagens dos filmes dinâmicas -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        
-        <div class="label-input">
-            <label for="genero">Gênero</label>
-            <select name="genero" id="genero"></select>
+
+        <hr class="my-5">
+
+        <h2>Adicionar Novo Filme</h2>
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Nome do Filme (alt+t)">
         </div>
-        
-        <div class="label-input">
-            <label for="resumo">Resumo</label>
-            <textarea name="resumo" id="resumo" placeholder="Descrição do Filme"></textarea>
+
+        <div class="mb-3">
+            <label for="classificacao" class="form-label">Classificação</label>
+            <select class="form-select" id="classificacao"></select>
         </div>
+
+        <div class="mb-3">
+            <label for="genero" class="form-label">Gênero</label>
+            <select class="form-select" id="genero"></select>
+        </div>
+
+        <div class="mb-3">
+            <label for="resumo" class="form-label">Resumo</label>
+            <textarea class="form-control" id="resumo" rows="3" placeholder="Descrição do Filme"></textarea>
+        </div>
+
+        <ul id="header-list" class="list-inline"></ul> <!-- Lista de navegação dinamica -->
     </div>
 
+    <footer class="text-center py-4 bg-dark text-light mt-5">
+        <p>© 2024 SG-Cinema. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripter.js" type="module"></script>
+    <script src="./loadFilmes.js"></script>
 </body>
+
 </html>

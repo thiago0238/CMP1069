@@ -3,10 +3,11 @@ const Header = [
     "filmes", 
     "Sessoes",
     "salas", 
-    "ingersso", 
+    "ingresso", 
     "cliente", 
     "contato"
-]
+];
+
 const classificacoes = [
     { value: "livre", label: "Livre" },
     { value: "10", label: "10" },
@@ -23,14 +24,15 @@ const generos = [
     { value: "terror", label: "Terror" },
     { value: "ficcao", label: "Ficção Científica" }
 ];
-// componentes para renderizar o header
-const UlElements = document.getElementById("header-list")
-Object.keys(Header).map(key=>{
-    const li = document.createElement("li")
-    li.textContent = Header[key]
-    UlElements.appendChild(li)
-})
 
+// Função para renderizar o header
+const UlElements = document.getElementById("header-list");
+Header.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    li.classList.add("list-inline-item", "mx-2");
+    UlElements.appendChild(li);
+});
 
 // Função para preencher selects dinamicamente
 function populateSelect(selectId, options) {
@@ -46,3 +48,12 @@ function populateSelect(selectId, options) {
 // Preenchendo selects
 populateSelect("classificacao", classificacoes);
 populateSelect("genero", generos);
+
+document.getElementById('searchForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevenir o comportamento padrão do form
+    const query = document.getElementById('searchInput').value;
+    if (query) {
+        // Redirecionar para a página de resultados com a query na URL
+        window.location.href = `resultados.html?query=${query}`;
+    }
+});

@@ -1,0 +1,12 @@
+/* Estilos customizados */
+body {
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    margin-top: 20px;
+}
+
+.toast-container {
+    z-index: 1050;
+}
